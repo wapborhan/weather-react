@@ -1,5 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
+import SearchWeather from "./SearchWeather";
 
 export default function MainComponent() {
-  return <div className="container">MainComponent</div>;
+  return (
+    <Fragment>
+      <SearchWeather />
+    </Fragment>
+  );
 }
