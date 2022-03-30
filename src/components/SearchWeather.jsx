@@ -38,7 +38,11 @@ export default function SearchWeather() {
       emoji = "fa-smog";
     }
   } else {
-    return <div>.....Loading</div>;
+    return (<div className="text-center mt-5">
+      <div className="state mb-2 h1"><span style={{color:"red"}}>" {search} "</span> is not correct state</div>
+      <div className="text mb-3 h2">Type Correct State</div>
+      <a className="btn btn-success" href="/">Search Again</a>
+    </div>);
   }
   let temp = (data.main.temp - 273.15).toFixed(2);
   let temp_min = (data.main.temp_min - 273.15).toFixed(2);
@@ -68,7 +72,7 @@ export default function SearchWeather() {
         <div className="col-md-4">
           <div className="card text-white text-center border-0">
             <img
-              src={`https://source.unsplash.com/600x900/?${data.weather[0].main}`}
+              src={`https://source.unsplash.com/600x800/?${data.weather[0].main}`}
               alt=""
               className="card-img"
             />
